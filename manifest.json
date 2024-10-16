@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "author": {
     "name": "Bruno Portis",
     "email": "bruno@portis.dev"
@@ -7,23 +7,14 @@
   "name": "Copy Authorization Header",
   "version": "1.0",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
     "clipboardWrite",
     "storage",
-    "*://*/*",
-    "contextMenus"
+    "contextMenus",
+    "activeTab"
   ],
+  "devtools_page": "devtools.html",
   "background": {
-    "scripts": ["background.js"]
-  },
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
+    "service_worker": "service_worker.js"
   },
   "icons": {
     "16": "icon.png",
